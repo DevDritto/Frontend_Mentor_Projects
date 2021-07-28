@@ -1,0 +1,172 @@
+/* Reset */
+body,
+span,
+div,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+img {
+  display: block;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url(../fonts/Inter-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(../fonts/Inter-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LexendDeca";
+  src: url(../fonts/LexendDeca-Regular.ttf); 
+  font-display: swap;
+}
+
+/* Style */
+
+body {
+  display: grid;
+  place-items: center;
+  background: #0A0C1B;
+}
+
+.container {
+  display: flex;
+  background: #1C1938;
+  color: #FFFFFF;
+  max-width: 1080px;
+  margin: 0 30px;
+  border-radius: 10px;
+}
+
+.l-side {
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text h1 {
+  font-family: "Inter Regular";
+  font-size: 36px;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.text h1 > span {
+  color: #AD5FDF;
+}
+
+.text p {
+  font-family: "Inter Regular";
+  max-width: 350px;
+  font-size: 14px;
+  line-height: 1.6rem;
+  color: #ffffff88;
+}
+
+.data {
+  display: flex;
+  max-width: 350px;
+  justify-content: space-between;
+}
+
+.data p > span {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family: "Inter Bold";
+  margin-bottom: 10px;
+  text-transform: initial;
+}
+
+.data p {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff88;
+  font-family: "LexendDeca";
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#desktop-img {
+  height: 446px;
+  width: 540px;
+}
+
+#mobile-img {
+  display: none;
+  height: 480px;
+  width: 654px;
+}
+
+@media only screen and (max-width: 1042px) {
+  .l-side {
+    padding: 50px 70px;
+  }
+}
+
+@media only screen and (max-width: 994px) {
+  .container {
+    flex-direction: column-reverse;
+    margin: 30px;
+    max-width: 654px;
+  }
+
+  .l-side {
+    padding: 50px 30px;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .data {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #desktop-img {
+    display: none;
+  }
+
+  #mobile-img {
+    display: block;
+  }
+
+  .text h1 {
+    max-width: 750px;
+  }
+
+  .text p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
